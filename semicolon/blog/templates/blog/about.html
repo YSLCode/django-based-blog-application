@@ -1,0 +1,10 @@
+<!-- for a better code-reading experience, all repeated code in templates
+were moved to 'base.html' and only the unique codes will remain.
+so we will override the 'content' block in the 'base.html' with the code below -->
+{% extends "blog/base.html" %}
+{% block content%}
+  <!--The code below is the way we can write python code within html 
+  (note: all statements need to be ended. e.g:endfor ot endif)-->
+	<h1>About semiColon</h1>
+
+{% endblock content %}

@@ -1,0 +1,15 @@
+<!-- for a better code-reading experience, all repeated code in templates
+were moved to 'base.html' and only the unique codes will remain.
+so we will override the 'content' block in the 'base.html' with the code below -->
+{% extends "blog/base.html" %}
+{% block content%}
+    <!--The code below is the way we can write python code within html 
+        (note: all statements need to be ended. e.g:endfor ot endif)
+        The code is for iterating through posts list and printing them out-->
+    {% for post in posts %}
+    <h1>{{ post.title }}</h1>
+    <p>By {{ post.author }} on {{ post.date_posted }}</p>
+    <p>{{ post.content }}</p>
+    {% endfor %}
+
+{% endblock content %}
