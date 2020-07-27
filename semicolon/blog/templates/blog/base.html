@@ -1,6 +1,8 @@
 <!-- This template is made for the repeated codes in the templates making codes
 cleaner and readable -->
 
+<!-- Loading a css file from the 'static' directory -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +17,8 @@ cleaner and readable -->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- end of Bootstrap requirements-->
+  <!-- external css file -->
+  <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
 
 
   <!-- This if else statement is for setting the right title for the page-->
@@ -54,8 +58,8 @@ cleaner and readable -->
 
   <!-- This is the part that we will override later in other templates-->
   <!--CODE: <div class="container">
-    {% block content %}
-    {% endblock %}
+    % block content %}
+    % endblock %}
   </div> -->
   <!-- Note: The part above was a sample code and main code is under this comment -->
   <main role="main" class="container">
