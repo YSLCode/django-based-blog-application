@@ -1,10 +1,12 @@
 from django.shortcuts import render
+from .models import Post
 #end of default code
 # Code: from django.http import HttpResponse
 #The import above is used when we need to return pure html code instead of template.
 
 #views
 # 'posts' is a list containing dictionaries associated with posts
+# THIS IS DUMMY DATA AND MAIN DATA IS GOING TO BE QUERIED FROM DB
 posts = [
     {
         'author': 'SomeOne',
@@ -28,7 +30,7 @@ def home(request):
 
     #In order to pass out posts' data to the template we create 'context'
     context = {
-        'posts': posts
+        'posts': Post.objects.all()
     }
 
     # return HttpResponse('<h1>Welcome to SemiColon home</h1>')
