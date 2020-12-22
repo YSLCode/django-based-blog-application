@@ -18,3 +18,7 @@ class Post(models.Model):
 
     # setting up one-to-many relationship between posts and users
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    # For showing the title when querying the Post with Post.objects.all()
+    def __str__(self):
+        return self.title
